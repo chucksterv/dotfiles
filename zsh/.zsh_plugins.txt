@@ -1,0 +1,6 @@
+
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+
+#Theme
+sindresorhus/pure     kind:fpath
