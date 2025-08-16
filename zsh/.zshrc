@@ -35,16 +35,20 @@ zstyle ':completion:*' menu select
 autoload -Uz promptinit && promptinit && prompt pure
 eval "$(zoxide init --cmd=cd zsh)"
 
-################
-### KEYBINDS ###
-################
+####################
+### KEY BINDINGS ###
+####################
+
+# Enable vi key bindings
+bindkey -v
 
 # Use the vi navigation keys in menu completion
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v
-bindkey '^ ' autosuggest-accept
+
+# Plugin key bindings
+bindkey '^ ' autosuggest-accept # accept autosuggestion with ctrl + space
 
 export PATH=$PATH:/home/chucky/.spicetify
